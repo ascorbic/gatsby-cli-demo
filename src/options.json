@@ -1,0 +1,115 @@
+[
+  {
+    "question": "What sort of site are you building?",
+    "multi": false,
+    "label": "Starter",
+    "key": "starters",
+    "options": [
+      {
+        "label": "A blog",
+        "value": "gatsby-starter-blog"
+      },
+      {
+        "label": "A portfolio",
+        "value": "LekoArts/gatsby-starter-portfolio-cara"
+      },
+      {
+        "label": "Something else",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "question": "Which language will you be using?",
+    "multi": false,
+    "label": "Language",
+    "key": "language",
+    "options": [
+      {
+        "label": "JavaScript",
+        "value": ""
+      },
+      {
+        "label": "TypeScript",
+        "value": "gatsby-plugin-typescript"
+      }
+    ]
+  },
+  {
+    "question": "Do you want to add a styling system?",
+    "multi": false,
+    "label": "Styles",
+    "key": "styles",
+    "options": [
+      { "label": "None", "value": "" },
+      {
+        "label": "Sass",
+        "value": "gatsby-plugin-sass"
+      },
+      {
+        "label": "Styled Components",
+        "value": "gatsby-plugin-styled-components"
+      },
+      {
+        "label": "Emotion",
+        "value": "gatsby-plugin-emotion"
+      },
+      {
+        "label": "CSS Modules / PostCSS",
+        "value": "gatsby-plugin-postcss"
+      }
+    ]
+  },
+  {
+    "question": "Will you be using a CMS?",
+    "multi": true,
+    "label": "CMS",
+    "key": "cms",
+    "options": [
+      {
+        "label": "Contentful",
+        "value": "gatsby-source-contentful"
+      },
+      {
+        "label": "Wordpress",
+        "value": "gatsby-source-wordpress"
+      },
+      {
+        "label": "Prismic",
+        "value": "gatsby-source-prismic"
+      },
+      {
+        "label": "DatoCMS",
+        "value": "gatsby-source-datacms"
+      },
+      {
+        "label": "Drupal",
+        "value": "gatsby-source-drupal"
+      }
+    ]
+  },
+  {
+    "question": "Would you like to add any other plugins?",
+    "multi": true,
+    "label": "Other plugins",
+    "key": "other",
+    "options": [
+      {
+        "label": "MDX",
+        "value": "gatsby-mdx"
+      },
+      {
+        "label": "Google Analytics",
+        "value": "gatsby-plugin-google-analytics"
+      },
+      {
+        "label": "Google Tag Manager",
+        "value": "gatsby-plugin-google-tagmanager"
+      },
+      {
+        "label": "Mailchimp",
+        "value": "gatsby-plugin-mailchimp"
+      }
+    ]
+  }
+]
