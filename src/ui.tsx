@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Text, Color, Box } from "ink";
-import SelectInput, { Item } from "ink-select-input";
+import SelectInput, { Item, ItemProps } from "ink-select-input";
 import MultiSelectInput, { ListedItem } from "ink-multi-select";
 import questions, { Question } from "./options.json";
 interface Props {
-    name?: string;
+    isSelected: boolean;
+    label: string;
 }
 
 interface Answer {
@@ -12,7 +13,11 @@ interface Answer {
     answers: Item[];
 }
 
-export const App: React.FC<Props> = ({ name }) => {
+const ListItem: React.FC<ItemProps> = ({ isSelected, label }) => (
+    <Color green={isSelected}>{label}</Color>
+);
+
+export const App: React.FC = () => {
     const [answers, setAnswers] = useState<Answer[]>([]);
 
     const handleSelect = (item: Item) => {
@@ -80,13 +85,24 @@ export const App: React.FC<Props> = ({ name }) => {
                                 submit
                             </Text>
                             <MultiSelectInput
+                                itemComponent={ListItem}
                                 key={JSON.stringify(options)}
                                 items={options}
                                 onSubmit={handleSubmit}
                             />
                         </>
                     ) : (
-                        <SelectInput items={options} onSelect={handleSelect} />
+                        <>
+                            <Text>
+                                Use the arrow keys to choose an option, and
+                                enter to submit
+                            </Text>
+                            <SelectInput
+                                itemComponent={ListItem}
+                                items={options}
+                                onSelect={handleSelect}
+                            />
+                        </>
                     ))}
 
                 {!current && (

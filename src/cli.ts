@@ -17,4 +17,4 @@ const cli = meow(
     }
 );
 
-render(React.createElement(App, cli.flags));
+render(React.createElement(App));
