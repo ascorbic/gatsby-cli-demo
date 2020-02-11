@@ -1,17 +1,15 @@
 {
-  "name": "gatsby-cli-demo",
-  "version": "1.0.0",
+  "name": "@ascorbic/gatsby-cli-demo",
+  "version": "1.0.1",
   "license": "MIT",
   "bin": "build/cli.js",
   "engines": {
     "node": ">=8"
   },
   "scripts": {
-    "test": "xo && ava",
     "start": "tsc --watch",
     "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "postinstall": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "build"
