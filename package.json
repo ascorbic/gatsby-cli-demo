@@ -8,7 +8,10 @@
   },
   "scripts": {
     "test": "xo && ava",
-    "start": "tsc --watch"
+    "start": "tsc --watch",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "preinstall": "npm run build"
   },
   "files": [
     "build"
